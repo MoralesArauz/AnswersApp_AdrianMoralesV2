@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnswersApp.Views.UserRegisterPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20,0,20,0" VerticalOptions="Center">
+            <Entry x:Name="TxtUserName" Keyboard="Email" TextTransform="Lowercase" Placeholder="Email" HorizontalTextAlignment="Center" FontSize="Large" TextColor="Black" />
+            <Entry x:Name="TxtFirstName" TextTransform="Uppercase" Placeholder="First Name" HorizontalTextAlignment="Center" FontSize="Large" TextColor="Black" />
+            <Entry x:Name="TxtLastName" TextTransform="Uppercase" Placeholder="Last Name" HorizontalTextAlignment="Center" FontSize="Large" TextColor="Black" />
+            <Entry x:Name="TxtPhoneNumber" Keyboard="Telephone" TextChanged="OnTextChanged"  Placeholder="Phone Number" HorizontalTextAlignment="Center" FontSize="Large" TextColor="Black" />
+            <Entry x:Name="TxtPassword" IsPassword="True" HorizontalTextAlignment="Center" Placeholder="Password" FontSize="Large" TextColor="Black" />
+
+            <Switch x:Name="SwSeePassword" IsToggled="False" Toggled="CmdSeePassword" />
+            <Entry x:Name="BackUpEmail" TextTransform="Lowercase" Placeholder="Backup Email" HorizontalTextAlignment="Center" FontSize="Large" TextColor="Black" />
+            <Entry x:Name="JobDescription" Placeholder="Job Description" HorizontalTextAlignment="Center" FontSize="Large" TextColor="Black" />
+
+            <FlexLayout>
+
+                <StackLayout Padding="0,100,20,0" Orientation="Horizontal" HorizontalOptions="Start" Spacing="10">
+
+                    <Button x:Name="BtnRegister" WidthRequest="170" Clicked="CmdRegisterUser" VerticalOptions="Center" Text="Register" BackgroundColor="DarkGreen" BorderWidth="1" BorderColor="DarkGreen" FontSize="Large" CornerRadius="40"/>
+
+                    <Button x:Name="BtnCancelRegister" WidthRequest="170" Clicked="CmdCancelRegister" VerticalOptions="Center" Text="Cancel" BackgroundColor="Red"  BorderWidth="1" BorderColor="White" FontSize="Medium" CornerRadius="30"/>
+
+                </StackLayout>
+            </FlexLayout>
+
+
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
