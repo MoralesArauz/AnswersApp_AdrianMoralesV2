@@ -12,10 +12,13 @@ namespace AnswersApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
+
+        UserViewModel Vm;
+
         public LoginPage()
         {
             InitializeComponent();
-            this.BindingContext = new LoginViewModel();
+            this.BindingContext = Vm = new UserViewModel();
         }
 
         private async void CmdUserRegister(object sender, EventArgs e)
@@ -26,6 +29,25 @@ namespace AnswersApp.Views
         private void CmdSeePassword(object sender, ToggledEventArgs e)
         {
             TxtPassword.IsPassword = !SwSeePassword.IsToggled;
+        }
+
+        private async void BtnLogin_Clicked(object sender, EventArgs e)
+        {
+            bool R = await Vm.ValidateUserAccess(TxtUserName.Text.Trim(), TxtPassword.Text.Trim());
+
+            if (R)
+            {
+                // Quitar este mensaje
+                await DisplayAlert(":)", "Usuario Correcto", "OK");
+
+                //await Navigation.PushAsync(new OptionsPage);
+            }
+            else
+            {
+                await DisplayAlert(":(", "Error de credenciales", "Ok");
+                TxtPassword.Focus();
+                
+            }
         }
     }
 }

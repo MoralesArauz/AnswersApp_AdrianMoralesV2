@@ -5,14 +5,18 @@
     <ContentPage.Content>
         <StackLayout Padding="20,0,20,0" VerticalOptions="Center">
             <Entry x:Name="TxtUserName" Keyboard="Email" TextTransform="Lowercase" Placeholder="Email" HorizontalTextAlignment="Center" FontSize="Large" TextColor="Black" />
-            <Entry x:Name="TxtFirstName" TextTransform="Uppercase" Placeholder="First Name" HorizontalTextAlignment="Center" FontSize="Large" TextColor="Black" />
-            <Entry x:Name="TxtLastName" TextTransform="Uppercase" Placeholder="Last Name" HorizontalTextAlignment="Center" FontSize="Large" TextColor="Black" />
+            <Entry x:Name="TxtFirstName"  Placeholder="First Name" HorizontalTextAlignment="Center" FontSize="Large" TextColor="Black" />
+            <Entry x:Name="TxtLastName"  Placeholder="Last Name" HorizontalTextAlignment="Center" FontSize="Large" TextColor="Black" />
             <Entry x:Name="TxtPhoneNumber" Keyboard="Telephone" TextChanged="OnTextChanged"  Placeholder="Phone Number" HorizontalTextAlignment="Center" FontSize="Large" TextColor="Black" />
             <Entry x:Name="TxtPassword" IsPassword="True" HorizontalTextAlignment="Center" Placeholder="Password" FontSize="Large" TextColor="Black" />
 
             <Switch x:Name="SwSeePassword" IsToggled="False" Toggled="CmdSeePassword" />
             <Entry x:Name="BackUpEmail" TextTransform="Lowercase" Placeholder="Backup Email" HorizontalTextAlignment="Center" FontSize="Large" TextColor="Black" />
             <Entry x:Name="JobDescription" Placeholder="Job Description" HorizontalTextAlignment="Center" FontSize="Large" TextColor="Black" />
+
+            <Picker x:Name="CboUserRole" Title="Select a User Role" TitleColor="Aqua">
+                
+            </Picker>
 
             <FlexLayout>
 

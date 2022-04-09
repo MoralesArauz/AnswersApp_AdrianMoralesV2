@@ -17,14 +17,14 @@
 
                 <StackLayout>
                     <Switch x:Name="SwSeePassword" IsToggled="False" Toggled="CmdSeePassword" />
-                    <Label Text="See Pass" FontSize="Micro"/>
+                    <Label Text="Show Pass" FontSize="Micro"/>
 
                 </StackLayout>
 
             </StackLayout>
 
 
-            <Button x:Name="BtnLogin"  VerticalOptions="Center" Text="Login" BackgroundColor="DarkCyan" BorderWidth="1" BorderColor="DarkGreen" FontSize="Large" CornerRadius="40"/>
+            <Button x:Name="BtnLogin"  VerticalOptions="Center" Text="Login" BackgroundColor="DarkCyan" BorderWidth="1" BorderColor="DarkGreen" FontSize="Large" CornerRadius="40" Clicked="BtnLogin_Clicked" />
 
             <Button x:Name="BtnRegister" Clicked="CmdUserRegister" VerticalOptions="Center" Text="Register" BackgroundColor="#8F998F"  BorderWidth="1" BorderColor="Black" FontSize="Medium" CornerRadius="30"/>
 
