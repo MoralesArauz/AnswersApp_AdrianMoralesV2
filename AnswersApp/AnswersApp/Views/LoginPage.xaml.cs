@@ -38,9 +38,9 @@ namespace AnswersApp.Views
             if (R)
             {
                 // Quitar este mensaje
-                await DisplayAlert(":)", "Usuario Correcto", "OK");
+                //await DisplayAlert(":)", "Usuario Correcto", "OK");
 
-                //await Navigation.PushAsync(new OptionsPage);
+                await Navigation.PushAsync(new ActionsPage());
             }
             else
             {

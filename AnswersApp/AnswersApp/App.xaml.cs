@@ -14,7 +14,7 @@ namespace AnswersApp
             InitializeComponent();
 
             
-            MainPage = new NavigationPage(new LoginPage());
+            MainPage = new NavigationPage(new ActionsPage());
         }
 
         protected override void OnStart()
