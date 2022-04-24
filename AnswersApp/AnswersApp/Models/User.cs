@@ -23,6 +23,8 @@ namespace AnswersApp.Models
             Likes = new HashSet<Like>();
 
             request = new RestRequest();
+
+            UserRole = new UserRole();
         }
 
 
@@ -137,6 +139,11 @@ namespace AnswersApp.Models
             }
 
             return R;
+        }
+
+        public async Task<List<UserRole>> GetUserRoles() {
+
+            return await UserRole.GetUserRolesList();
         }
 
 

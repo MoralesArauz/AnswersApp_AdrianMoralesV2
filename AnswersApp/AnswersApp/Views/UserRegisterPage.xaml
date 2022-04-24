@@ -14,7 +14,12 @@
             <Entry x:Name="BackUpEmail" TextTransform="Lowercase" Placeholder="Backup Email" HorizontalTextAlignment="Center" FontSize="Large" TextColor="Black" />
             <Entry x:Name="JobDescription" Placeholder="Job Description" HorizontalTextAlignment="Center" FontSize="Large" TextColor="Black" />
 
-            <Picker x:Name="CboUserRole" Title="Select a User Role" TitleColor="Aqua">
+            <Picker x:Name="CboUserRole" 
+                    Title="Select a User Role" 
+                    TitleColor="Black"
+                    ItemDisplayBinding="{Binding UserRole1}"
+                    >
+                
                 
             </Picker>
 

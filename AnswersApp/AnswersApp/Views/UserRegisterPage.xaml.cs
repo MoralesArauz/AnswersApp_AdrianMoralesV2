@@ -13,12 +13,14 @@ namespace AnswersApp.Views
     public partial class UserRegisterPage : ContentPage
     {
         UserViewModel viewModel;
-
+        List<UserViewModel> users;
         public UserRegisterPage()
         {
             InitializeComponent();
             // Estamos anclando la vista con el viewModel respectivo
             BindingContext = viewModel = new UserViewModel();
+
+            LoadUserRoles();
         }
 
         private void CmdCancelRegister(object sender, EventArgs e)
@@ -58,6 +60,12 @@ namespace AnswersApp.Views
         private void CmdSeePassword(object sender, ToggledEventArgs e)
         {
             TxtPassword.IsPassword = !SwSeePassword.IsToggled;
+        }
+
+        private async void LoadUserRoles()
+        {
+            var roles = await viewModel.MyUser.GetUserRoles();
+            CboUserRole.ItemsSource = roles;
         }
     }
 }
