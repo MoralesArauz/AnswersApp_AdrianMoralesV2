@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnswersApp.Views.UserRegisterPageV2"
+             xmlns:viewmodels="clr-namespace:AnswersApp.ViewModels" 
+             x:DataType="viewmodels:UserViewModeV2">
+    <ContentPage.Content>
+        
+        <StackLayout Padding="20,0,20,0" VerticalOptions="Center">
+            <Entry x:Name="TxtUserName" Keyboard="Email" TextTransform="Lowercase" Placeholder="Email" HorizontalTextAlignment="Center" FontSize="Large" TextColor="Black" Text="{Binding Correo}"  />
+            <Entry x:Name="TxtFirstName" Text="{Binding Nombre}" Placeholder="First Name" HorizontalTextAlignment="Center" FontSize="Large" TextColor="Black" />
+            <Entry x:Name="TxtLastName"  Text="{Binding Apellidos}" Placeholder="Last Name" HorizontalTextAlignment="Center" FontSize="Large" TextColor="Black" />
+            <Entry x:Name="TxtPhoneNumber" Text="{Binding NumeroDeTelefono}" Keyboard="Telephone"  Placeholder="Phone Number" HorizontalTextAlignment="Center" FontSize="Large" TextColor="Black" />
+            <Entry x:Name="TxtPassword" Text="{Binding Contrasenia}" IsPassword="True" HorizontalTextAlignment="Center" Placeholder="Password" FontSize="Large" TextColor="Black" />
+
+            <Switch x:Name="SwSeePassword" IsToggled="False" />
+            <Entry x:Name="BackUpEmail" Text="{Binding CorreoDeRespaldo}" TextTransform="Lowercase" Placeholder="Backup Email" HorizontalTextAlignment="Center" FontSize="Large" TextColor="Black" />
+            <Entry x:Name="JobDescription" Text="{Binding DescripcionDelEmpleo}" Placeholder="Job Description" HorizontalTextAlignment="Center" FontSize="Large" TextColor="Black" />
+
+            <!--<Picker x:Name="CboUserRole" 
+                    Title="Select a User Role" 
+                    TitleColor="Black"
+                    ItemDisplayBinding="{Binding UserRole1}"
+                    >
+            </Picker>-->
+
+            <FlexLayout>
+
+                <StackLayout Padding="0,100,20,0" Orientation="Horizontal" HorizontalOptions="Start" Spacing="10">
+
+                    <Button x:Name="BtnRegister" Command="{Binding AgregarUsuarioComand}" WidthRequest="170" VerticalOptions="Center" Text="Register" BackgroundColor="DarkGreen" BorderWidth="1" BorderColor="DarkGreen" FontSize="Large" CornerRadius="40"/>
+
+                    <Button x:Name="BtnCancelRegister" WidthRequest="170"  VerticalOptions="Center" Text="Cancel" BackgroundColor="Red"  BorderWidth="1" BorderColor="White" FontSize="Medium" CornerRadius="30"/>
+
+                </StackLayout>
+            </FlexLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

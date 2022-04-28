@@ -60,7 +60,7 @@ namespace AnswersApp.Models
             try
             {
                 //  Se adjunta a la url base la direccion del recurso que queremos consumir
-                string FinalApiRoute = CnnToAPI.ProductionRoute + "users";
+                string FinalApiRoute = CnnToAPI.ProductionRoute + "Users";
 
                 RestClient client = new RestClient(FinalApiRoute);
 

@@ -23,7 +23,7 @@ namespace AnswersApp.Views
 
         private async void CmdUserRegister(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new UserRegisterPage());
+            await Navigation.PushAsync(new UserRegisterPageV2());
         }
 
         private void CmdSeePassword(object sender, ToggledEventArgs e)

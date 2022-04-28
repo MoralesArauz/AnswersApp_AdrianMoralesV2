@@ -46,9 +46,9 @@ namespace AnswersApp.Models
                 // Como esta ruta es un poco más compleja de consumir, ya que lleva una función con nombre y ademas dos
                 // parámetros, lo más conveniente es formatearla por aparte y luego adjuntarla a Base URL(nnToAPI.ProductionRoute)
                 // para obtener la ruta completa
-                //string routeSufix = string.Format("Asks/GetQuestionsListByUserID?pUserID={0}",
-                //                                    this.UserId);
-                string routeSufix = "Asks";
+                string routeSufix = string.Format("Asks/GetQuestionsListByUserID?pUserID={0}",
+                                                    this.UserId);
+                //string routeSufix = "Asks";
                 string FinalApiRoute = CnnToAPI.ProductionRoute + routeSufix;
 
                 RestClient client = new RestClient(FinalApiRoute);
